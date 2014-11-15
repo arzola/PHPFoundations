@@ -13,7 +13,6 @@ function updateCounter() {
     echo "Static counter is now {$counter} and NOstatic counter is now {$nostatic} </br>\n";
 }
 
-$counter = 10;
 updateCounter();
 updateCounter();
 updateCounter();

@@ -11,7 +11,7 @@ echo '<pre>';
 print_r($numeros);
 echo '</pre>';
 
-foreach($numeros as $num){
+foreach($numeros as &$num){
     $num = $num * 2;
 }
 
@@ -22,7 +22,7 @@ echo '</pre>';
 
 $numero = 10;
 
-function restaDos($numero){
+function restaDos(&$numero){
     $numero-=2;
 }
 

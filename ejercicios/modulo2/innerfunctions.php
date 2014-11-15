@@ -10,6 +10,6 @@ function procesaPago($total){
     }
     return "procesando pago por $total</br>";
 }
-
-echo procesaPago(100);
 echo calculaIvaPago();
+echo procesaPago(100);
+

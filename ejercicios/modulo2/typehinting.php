@@ -4,8 +4,32 @@
 //http://php.net/manual/es/language.oop5.typehinting.php
 //Usarse con clases e Interfaces
 
-function suma(int $v, float $v2){
-    return $v + $v2;
+
+interface Facturable{
+    function calcularIva();
+    function validarRfc();
 }
 
-echo suma(1+3);
+class FacturaDigital implements Facturable{
+    function calcularIva() {
+        return 'Calculando Iva Factura';
+    }
+    function validarRfc() {
+        
+    }
+}
+
+class ReciboBarato implements Facturable{
+    function calcularIva() {
+        return 'Calculando Iva Recibo';
+    }
+    function validarRfc() {
+        
+    }
+}
+
+function CalcularMonto(Facturable $factura){
+    return $factura->calcularIva();
+}
+
+echo CalcularMonto(new ReciboBarato());

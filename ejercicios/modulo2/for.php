@@ -6,7 +6,7 @@
 
 $valores = range(0,100);
 
-for($i=0;$i<count($valores);$i++){
+for($i=0,$total = count($valores);$i<$total;$i++){
     echo $valores[$i];
 }
 
