@@ -1,5 +1,5 @@
 <?php
-
+//agregue algo
 switch($str){
     default:
         echo 'p';
