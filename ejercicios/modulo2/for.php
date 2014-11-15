@@ -1,0 +1,6 @@
+<?php
+
+/* 
+ * Nice for features :)
+ */
+

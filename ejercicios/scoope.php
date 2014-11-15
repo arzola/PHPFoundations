@@ -8,5 +8,5 @@ function say(){
 }
 
 namespace P;
-
-echo 'hola '.$nombre . \U\say();
+use U as FuncionesCoquetas;
+echo 'hola '.$nombre .FuncionesCoquetas\say();

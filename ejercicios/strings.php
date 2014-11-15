@@ -6,10 +6,11 @@
  * 
  */
 
-$cadena = 'Hola mundo $variable';
-$cadena2 = "$cadena Oscar";
+$cadena = 'zzz';
+$cadena2 = "$cadena Oscar {$d['hola']}";
 $cadena3 = <<<LARGO
-        Soy una cadena mejor $cadena </br>
+        Soy una cadena mejor $cadena </br> 
+        dioewSNJAKsnakN SAjk sa SJKa sjka JKSKA saSas
 LARGO;
 
 echo $cadena3;
