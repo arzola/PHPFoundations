@@ -1,0 +1,3 @@
+Archivo con datos externos
+Separados por saltos de linea
+Me gusta :)
