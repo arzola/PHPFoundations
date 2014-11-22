@@ -24,6 +24,8 @@
                     <li>array_push()</li>
                     <li>array_pop()</li>
                     <li>array_shift()</li>
+                    <li>array_unshift()</li>
+                    <li>array_slice()</li>
                 </ul>
                 <li>Simple XML</li>
                 <li>DOMDocument</li>
