@@ -13,6 +13,8 @@ edad INT     NOT NULL
 );
 
 TABLE;
+
+
 $db->exec($create);
 
 $insert = sprintf("

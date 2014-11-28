@@ -6,7 +6,7 @@
  */
 
 //Obtener xhtml
-$html = file_get_contents('https://twitter.com/soydelicioso');
+$html = file_get_contents('https://twitter.com/dipak_enlinea');
 
 //Crear un Wrapper de DomDocument
 $doc = new DOMDocument();

@@ -16,6 +16,6 @@ print_r($datos2);
 
 //uso de la función  glob()
 
-$files = glob("files/*.*");
+$files = glob("files/a*.txt");
 
 print_r($files);

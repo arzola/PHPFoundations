@@ -27,6 +27,7 @@
                     <li>array_unshift()</li>
                     <li>array_slice()</li>
                 </ul>
+                <li>Emmet *magia anti talacha</li>
                 <li>Simple XML</li>
                 <li>DOMDocument</li>
                 <ul>

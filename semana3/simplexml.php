@@ -59,15 +59,18 @@ $movies = new SimpleXMLElement($xmlstr);
 echo $movies->movie->title . "</br>";
 echo $movies->movie[0]->title . "</br>"; //Igual el objeto SimpleXMLElement hace el casting con toString
 
+var_dump($movies->movie[0]->title);
+
 //Tener en cuenta los guiones (hyphen)
 
-echo $movies->movie->{'great-lines'}->line . "</br>";
+//echo $movies->movie->{'great-lines'}->line . "</br>";
 echo $movies->movie[0]->{'great-lines'}->line . "</br>";
+echo $movies->movie[1]->{'great-lines'}->line . "</br>";
 
 /* For cada <character>, imprimimos diferentes nombres <name>. */
 
 foreach ($movies->movie->characters->character as $character) {
-    echo $character->name, ' interpretado  por ', $character->actor, PHP_EOL . "</br>";
+    //echo $character->name, ' interpretado  por ', $character->actor, PHP_EOL . "</br>";
 }
 
 //Con xPath podemos hacer busquedas sobre el DOM del XML
@@ -86,7 +89,7 @@ foreach ($stars as $s) {
 
 //CUIDADOOO :D si quieres comparar un elemento con un string debes castearlo
 
-if ($movies->movie->title === 'Ethernal Sunshine') {
+if ((string)$movies->movie->title === 'Ethernal Sunshine') {
     print 'Mi favorita.';
 }
 
@@ -96,4 +99,12 @@ $nuevoPersonaje = $movies->movie[1]->characters->addChild('character');
 $nuevoPersonaje->addChild('name', 'El esposo de Summer');
 $nuevoPersonaje->addChild('actor', 'Oscar Arzola');
 
-echo $movies->asXML();
+$characters = $movies->xpath('//character');
+
+foreach ($characters as $mono) {
+    echo $mono->name . "</br>";
+}
+?>
+<pre>
+    <?php //echo $movies->asXML(); ?>
+</pre>
