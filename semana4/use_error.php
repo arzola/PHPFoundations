@@ -11,3 +11,5 @@ if ($usernmae) { // typo, $usernmae expands to null
 else {
     echo "Please log in...";
 }
+
+trigger_error('ERROR LOCO',E_USER_WARNING);

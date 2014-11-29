@@ -30,7 +30,7 @@ FATAL;
             $os = PHP_OS;
             $str = <<<WARNING
         <img src="error/warning.jpg" style="width:100px;"/></br>
-        <b>Malas Noticias: CUIDADO</b> [$errno] $errstr
+        <b>Malas Noticias: CUIDADO (WARNING)</b> [$errno] $errstr
         <p>
         Realmente nos apena decirte que ese código tiene algunos warning en la linea <strong>$errline</strong> en el archivo <strong>$errfile</strong>
         </p>
@@ -67,4 +67,4 @@ function check_for_fatal() {
 }
 
 register_shutdown_function("check_for_fatal");
-set_error_handler("custom_error_handler", 32767);
+set_error_handler("custom_error_handler", 32765);

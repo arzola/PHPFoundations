@@ -1,37 +1,24 @@
 <?php
+echo 'Al inicio ';
+echo memory_get_usage()/1000000 ."<br>";
 
-$start_time = microtime(true);
-$array = array();
-$result = '';
-for ($count = 1000000; $count--;) {
-    $array[] = $count / 2;
-}
-foreach ($array as $val) {
-    $val += 145.56;
-    $result .= $val;
-}
-$end_time = microtime(true);
+//function range2($inicio,$final,$step=1){
+//    for($i=$inicio; $i<=$final; $i+=$step){
+//        $a[] = $i;
+//    }
+//    echo memory_get_usage()/1000000 ."<br>";
+//    return $a;
+//}
 
-echo "time: ", bcsub($end_time, $start_time, 4), "\n";
-echo "memory (byte): ", memory_get_peak_usage(true), "\n";
-?>
-
-<?php
-
-$start_time = microtime(true);
-$result = '';
-
-function it() {
-    for ($count = 1000000; $count--;) {
-        yield $count / 2;
+function range3($inicio,$final,$step=1){
+    for($i=$inicio; $i<=$final; $i+=$step){
+        yield $i;
     }
+    echo memory_get_usage()/1000000 ."<br>";
 }
 
-foreach (it() as $val) {
-    $val += 145.56;
-    $result .= $val;
+foreach(range3(0,1000000) as $n){
+    
 }
-$end_time = microtime(true);
 
-echo "time: ", bcsub($end_time, $start_time, 4), "\n";
-echo "memory (byte): ", memory_get_peak_usage(true), "\n";
+echo memory_get_usage()/1000000 ."<br>";

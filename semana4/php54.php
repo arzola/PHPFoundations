@@ -16,7 +16,26 @@ echo $var; //imprime cool
 
 //Traits
 
-class HelloTrait{
+class BaseDeDatos{
+    
+    public function conectar(){
+        
+    }
+    
+}
+
+class Usuario{
+    private $_db;
+    public function setDb(BaseDeDatos $db){
+        $this->_db = $db;
+    }
+}
+
+
+$usuario = new Usuario();
+$usuario->setDb(new BaseDeDatos());
+
+class Cliente{
     use Log;
     public function Hello(){
         return 'Hello';
@@ -27,14 +46,11 @@ trait Log{
     public function sendByMail(){
        return 'Enviadno mail';
     }
-    //Pseudo sobre-carga
-    public function Hello(){
-        parent::Hello();
-        return 'Trait';   
-    }
 }
 
-$cosa = new HelloTrait();
+$cliente = new Cliente();
 
-echo $cosa->Hello();
-echo $cosa->sendByMail();
+echo $cliente->Hello();
+echo $cliente->sendByMail();
+
+$a['foo'];
