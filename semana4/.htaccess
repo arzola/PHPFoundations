@@ -1,0 +1,4 @@
+php_flag display_startup_errors on
+#Depende del PHP que se tenga instalado las constantes
+php_value error_reporting 32767
+php_flag display_errors on
